@@ -55,5 +55,9 @@ if selected_poem:
     st.sidebar.markdown("---")
     if st.sidebar.button("About Author"):
         st.sidebar.markdown("---")
-        st.sidebar.markdown("[LinkedIn](www.linkedin.com/in/amanajjoshi)")
-    
+        DESCRIPTION = "LinkedIn"
+        link_url = "https://www.linkedin.com/in/amanajjoshi/"
+        # Add a hyperlink to the text and apply color formatting
+        description_with_link = f"<font color='black'><a href='{link_url}' target='_blank'>{DESCRIPTION}</a></font>"
+        # Display the text with the hyperlink
+        st.sidebar.markdown(description_with_link, unsafe_allow_html=True)
