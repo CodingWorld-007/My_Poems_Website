@@ -1,0 +1,124 @@
+/* styles.css */
+
+/* Gradient background */
+[data-testid="stAppViewContainer"] {
+    background: linear-gradient(135deg, #1e1e1e, #383838);
+    color: #e0e0e0;
+    font-family: 'Helvetica Neue', sans-serif;
+    padding: 20px;
+}
+
+/* Sidebar background color and text styling */
+[data-testid="stSidebar"] {
+    background-color: #282828;
+}
+
+[data-testid="stSidebar"] * {
+    color: #e0e0e0;
+}
+
+/* Styling for the sidebar header */
+[data-testid="stSidebar"] .sidebar-content h1 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-top: 0;
+    font-family: 'Helvetica Neue', sans-serif; /* Keep existing font-family */
+}
+
+/* Styling for the select box */
+[data-testid="stSidebar"] .sidebar-content .css-1r36r20 {
+    background-color: #383838;
+    border: 1px solid #4a4a4a;
+    color: #e0e0e0;
+    font-family: 'Helvetica Neue', sans-serif; /* Keep existing font-family */
+}
+
+/* Styling for the poem image caption */
+.css-1v0mbdj {
+    font-size: 18px;
+    font-style: italic;
+    color: #bbbbbb;
+    text-align: center;
+    font-family: 'Helvetica Neue', sans-serif; /* Keep existing font-family */
+}
+
+/* Global styles for images */
+img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+/* Add a little margin to the title */
+h1 {
+    margin-top: 20px;
+    font-size: 32px;
+    text-align: center;
+    font-family: 'Garamond', serif; /* Stylish font for title */
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 10px;
+    border: 2px solid #1e1e1e;
+}
+
+::-webkit-scrollbar-track {
+    background: #1e1e1e;
+}
+
+/* Sidebar link hover effect */
+[data-testid="stSidebar"] a {
+    color: #6b6ba2;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+[data-testid="stSidebar"] a:hover {
+    color: #a7a03f;
+    transform: scale(1.05);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+    h1 {
+        font-size: 28px;
+    }
+
+    [data-testid="stSidebar"] {
+        width: 100%;
+    }
+}
+
+.about-author-button {
+    position: bottom;
+    bottom: 20px; /* Adjust this value to set the distance from the bottom */
+    left: 10px; /* Adjust this value to set the distance from the left */
+    width: calc(100% - 20px); /* Adjust width to match sidebar width */
+    padding: 10px 0;
+    background-color: #007bff; /* Button background color */
+    color: #dbb3b3; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.about-author-button:hover {
+    background-color: #0056b3; /* Darker shade of button on hover */
+    transform: translateY(-2px); /* Move button up slightly on hover */
+}
