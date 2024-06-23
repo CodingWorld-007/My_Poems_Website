@@ -32,7 +32,7 @@ poem_options = {
     "Its the End of Journey": "Poems/Poem2.jpg",
     "Reality is Money": "Poems/Poem6.jpg"
 }
-
+st.sidebar.markdown("Select Poems")
 # Main content
 selected_poem = st.sidebar.selectbox("Click below:", list(poem_options.keys()))
 
@@ -49,6 +49,7 @@ if selected_poem:
         img_base64 = image_to_base64(image)
         href = f'data:image/jpeg;base64,{img_base64}'
         st.markdown(f'<a href="{href}" download="{selected_poem}.jpg">Click here to download the Image</a>', unsafe_allow_html=True)
+    st.markdown("Click Top Left Corner button, For Different Poems")
     st.markdown("---")
     st.image(image, caption=selected_poem, use_column_width=True)
     st.markdown("---")
